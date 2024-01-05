@@ -1,10 +1,13 @@
 import React from "react";
-import { Header } from "../Common/Header";
+import "./Home.scss";
+import { Details } from "./Details";
 
 export const Home = () => {
     return (
         <React.Fragment>
-            <Header />
+          <div className="home container">
+            <Details />
+          </div>
         </React.Fragment>
     )
 }
