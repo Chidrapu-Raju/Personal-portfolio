@@ -1,20 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const AddProject = ({setProjects}) => {
 
+    const [message,setMessage] = useState('');
+    const navigate = useNavigate();
+
     const addProjects = (e) => {
         e.preventDefault();
-        alert("Project Created Successfully,Navigate to Project Section");
-        setProjects(prev => [...prev,{
-            name: document.getElementById('exampleInputName1').value,
-            link: document.getElementById('exampleInputLink1').value,
-            description: document.getElementById('exampleFormControlDescription').value,
-        }])
+        const name = document.getElementById('exampleInputName1').value;
+        const link = document.getElementById('exampleInputLink1').value;
+        const description =  document.getElementById('exampleFormControlDescription').value;
+        
+        if(name == "" || link == "" || description == ""){
+            setMessage("Fields should not be empty");
+        }
+        else{
+
+            setProjects(prev => [...prev,{
+                name: name,
+                link: link,
+                description: description
+            }]);
+
+            navigate('/projects');
+
+        }
+
+        
+        
     }
     return (
          <div className="add-project">
             <h1>Add Project</h1>
             <div className="line"></div>
+            { message && <div className="alert alert-danger">{message}</div> }
 <form>
   <div class="form-group">
     <label for="exampleInputEmail1">Project Name</label>

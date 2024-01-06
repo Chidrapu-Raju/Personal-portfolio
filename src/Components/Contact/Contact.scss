@@ -1,0 +1,17 @@
+.contact{
+    background-color: black;
+    color: white;
+    width: 40%;
+    border-radius: 1em;
+    padding: 2em;
+    margin: 0 auto 0 auto;
+    min-height: 60vh;
+    .each{
+        margin: 1em;
+        border-bottom: dotted 2px white;
+        p{
+            display: inline;
+            margin-left: 1em;
+        }
+    }
+}

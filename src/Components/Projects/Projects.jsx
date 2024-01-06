@@ -10,6 +10,7 @@ export const Projects = () => {
     
             <div className="projects">
                 <h1>Projects</h1>
+                <div className="line"></div>
                 <div className="list container">
                 {projects.map((each,index) => <EachProject name={each.name} description={each.description} index={index} />)} 
                 </div>
