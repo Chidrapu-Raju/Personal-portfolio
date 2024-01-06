@@ -1,5 +1,45 @@
 .home{
-    height: 78vh;
+    img{
+        position: absolute;
+        top:0;
+        right: 0;
+        z-index: -1;
+        width: 35%;
+            }
+    .first{
+        display: flex;
+        align-items: center;
+    }
+    .second{
+        .add-project{
+
+            .line{
+                height: 0.5em;
+                width: 4em;
+                margin: 0 auto 0 auto;
+                background-color: #ffc107;
+            }
+
+            form{
+
+                .form-group{
+                    width: 40%;
+                    margin: 1em auto 1em auto;
+                    text-align: start;
+                    
+                }
+                
+            }
+            button{
+                margin: em;
+                align-items: end;
+            }
+
+        }
+        
+       
+
+    }
 }
 .details{
     text-align: start;

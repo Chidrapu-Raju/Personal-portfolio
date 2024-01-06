@@ -6,10 +6,16 @@ import {  Route, Routes } from 'react-router-dom';
 import { About } from './Components/About/About';
 import { Projects } from './Components/Projects/Projects';
 import { Contact } from './Components/Contact/Contact';
+import { ProjectContext } from './Contexts/useProject';
+import { useState } from 'react';
 
 function App() {
+
+  const [projects,setProjects] = useState([]);
+
   return (
     <div className="App">
+      <ProjectContext.Provider value={{projects: projects,setProjects: setProjects}}>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -18,6 +24,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
         </Routes>
         <Footer />
+        </ProjectContext.Provider>
     </div>
   );
 }

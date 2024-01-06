@@ -12,6 +12,7 @@ export const Footer = () => {
             <div className="copyright">
                 <p>Copyright @2024 All rights reserved</p>
             </div>
+            <img src="lastLine.jpg"></img>
         </div>
     )
 }
